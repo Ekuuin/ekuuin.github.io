@@ -1,24 +1,40 @@
 ---
-import Section from "./Section.astro";
+import Card from "./Card.astro";
+import projects from "../config/projects.json";
 ---
 
-<div class="title">
-    <span>Proyectos</span>
-</div>
-<Section>
-    <span slot="section-title">Proyectos</span>
-    <div class="projects-body"></div>
-</Section>
+<section id="Proyectos">
+    <div class="title">
+      <span>Proyectos</span>
+    </div>
+    
+    <div class="projects-wrap">
+      {
+        projects.map((project) => (
+          <Card sizeBody="1.2rem">
+            <img class="img-project" src={project.img} slot="title" />
+            <span slot="body">{project.description}</span>
+          </Card>
+        ))
+      }
+    </div>
+</section>
 
 <style>
-    .title{
-        padding-top: 100px;
-       padding-left: 150px;
-        font-size: 3rem;
-    }
+  .title {
+    padding-top: 100px;
+    padding-left: 7.5%;
+    font-size: 4rem;
+  }
 
-    .projects-body{
-        height: 700px;
-    }
-    
+  .img-project{
+    width: 100%;
+  }
+
+  .projects-wrap{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(max(15rem, 100%/4), 1fr));
+    gap: 20px;
+  }
 </style>
