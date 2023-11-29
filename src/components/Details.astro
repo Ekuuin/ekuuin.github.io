@@ -7,7 +7,7 @@ import icons from "../config/icons.json";
 <div id="Detalles" class="details">
   <div class="frameworks">
     <Card sizeTitle="2.5rem">
-      <span slot="title">Herramientas</span>
+      <h3 slot="title" class="center">Skills</h3>
       <div class="icons-wrap" slot="body">
         {
           icons.map((icon) => (
@@ -24,7 +24,7 @@ import icons from "../config/icons.json";
     {
       qualities.map((quality) => (
         <Card sizeTitle="2rem" sizeBody="1.1rem" icon={quality.icon}>
-          <span slot="title">{quality.title}</span>
+          <h3 slot="title">{quality.title}</h3>
           <span slot="body">{quality.body}</span>
         </Card>
       ))
@@ -42,8 +42,14 @@ import icons from "../config/icons.json";
     padding-top: 150px;
   }
 
+  .center{
+    display: flex;
+    justify-content: center;
+  }
+
   .frameworks {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     grid-column: 1;
     justify-content: space-between;

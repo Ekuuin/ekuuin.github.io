@@ -1,5 +1,4 @@
 ---
-import Noise from "../components/Noise.astro";
 interface Props {
   title?: string;
 }
@@ -29,7 +28,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
         </div>
       </section>
       <slot />
-      <Noise />
+      <div class="noise"></div>
     </div>
   </body>
 </html>
@@ -60,6 +59,18 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
     bottom: 0;
     left: 0;
     right: 0;
+  }
+
+  .noise {
+    z-index: 2;
+    background-image: url("noise.png");
+    background-position: 0 0;
+    background-size: auto;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
   }
 
   .dots-pattern {

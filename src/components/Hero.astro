@@ -5,22 +5,23 @@ import Card from "./Card.astro";
 <div id="Hero" class="hero-wrapper">
   <div class="hero-left">
     <Card>
-      <span slot="title">Bienvenido. <br /> Mi nombre es Edwin.</span>
-      <span slot="body"
-        >Soy Desarrollador de Software Jr. ubicado en Guanajuato, México.
+      <h1 slot="title">Bienvenido. <br /> Mi nombre es Edwin.</h1>
+      <h2 slot="body">
+        Soy Ingeniero en Sistemas Computacionales ubicado en Guanajuato, México.
         Actualmente, me encuentro más enfocado al Desarrollo Web Full Stack
-        creando productos <strong>eficaces</strong> y <strong>accesibles</strong> para el usuario.
-        </span
-      >
+        creando productos <strong>eficaces</strong> y <strong>accesibles</strong
+        > para el usuario.
+      </h2>
     </Card>
   </div>
   <div class="hero-right">
-    <Card sizeTitle="3rem" sizeBody="1.2rem">
-      <span slot="title">Lorem, ipsum.</span>
-      <span slot="body"
-        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, nisi
-        aut. Quidem molestiae amet repudiandae. Doloremque eligendi in et vero.</span
-      >
+    <Card sizeTitle="2rem" sizeBody="1.2rem">
+      <h3 slot="title">Mis hobbies</h3>
+      <h5 slot="body">
+        A día de hoy, las cosas que más disfruto hacer son la lectura, los
+        videojuegos, el fitness, la gastronomía, adquirir habilidades cotidianas
+        y aprender sobre tecnología.
+      </h5>
     </Card>
   </div>
 </div>

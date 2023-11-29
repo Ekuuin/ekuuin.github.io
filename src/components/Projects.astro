@@ -4,15 +4,15 @@ import projects from "../config/projects.json";
 ---
 
 <section id="Proyectos">
-    <div class="title">
-      <span>Proyectos</span>
-    </div>
+    <h1 class="title">
+      Proyectos
+    </h1>
     
     <div class="projects-wrap">
       {
         projects.map((project) => (
           <Card sizeBody="1.2rem">
-            <img class="img-project" src={project.img} slot="title" />
+            <a href={project.link} target="_blank" class="link" slot="title"><img class="img-project" src={project.img}/></a>
             <span slot="body">{project.description}</span>
           </Card>
         ))
@@ -27,8 +27,13 @@ import projects from "../config/projects.json";
     font-size: 4rem;
   }
 
+  .link{
+    border-radius: 10px;
+  }
+
   .img-project{
     width: 100%;
+    border-radius: 10px;
   }
 
   .projects-wrap{
