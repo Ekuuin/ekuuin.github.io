@@ -1,0 +1,49 @@
+---
+import Card from "./Card.astro";
+---
+
+<div class="hero-wrapper">
+  <div class="hero-left">
+    <Card>
+      <span slot="title">Bienvenido. <br /> Mi nombre es Edwin.</span>
+      <span slot="body"
+        >Soy Desarrollador de Software Jr. ubicado en Guanajuato, México.
+        Actualmente, me encuentro más enfocado al Desarrollo Web Full Stack
+        creando productos eficaces y accesibles para el usuario.
+        </span
+      >
+    </Card>
+  </div>
+  <div class="hero-right">
+    <Card sizeTitle="3rem" sizeBody="1.2rem">
+      <span slot="title">Lorem, ipsum.</span>
+      <span slot="body"
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, nisi
+        aut. Quidem molestiae amet repudiandae. Doloremque eligendi in et vero.</span
+      >
+    </Card>
+  </div>
+</div>
+
+<style>
+  .hero-wrapper {
+    z-index: 3;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(max(15rem, 100%/2), 1fr));
+    gap: 90px;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+  }
+
+  .hero-right {
+    padding-top: 65%;
+    display: flex;
+    flex-direction: column;
+    grid-column: 4;
+  }
+</style>

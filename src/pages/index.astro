@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/layout.astro";
+import BackgroundPattern from "../components/BackgroundPattern.astro";
+import Hero from "../components/Hero.astro";
+import Details from "../components/Details.astro";
+import Projects from "../components/Projects.astro";
+import AppBar from "../components/AppBar.vue";
+import Container from "../components/Container.vue";
+---
+
+<Layout title="Ekuuin Dev">
+  <BackgroundPattern />
+  <AppBar client:only="vue">
+    <Container>
+      <Hero />
+    </Container>
+    <Container>
+      <Details />
+    </Container>
+    <Container>
+      <Projects />
+    </Container>
+  </AppBar>
+</Layout>

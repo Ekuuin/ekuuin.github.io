@@ -1,0 +1,34 @@
+[
+  {
+    "name": "vue.svg",
+    "alt": "VueJS"
+  },
+  {
+    "name": "python.svg",
+    "alt": "Python"
+  },
+  {
+    "name": "astro.svg",
+    "alt": "Astro"
+  },
+  {
+    "name": "c.svg",
+    "alt": "C++"
+  },
+  {
+    "name": "mysql.svg",
+    "alt": "MySQL"
+  },
+  {
+    "name": "js.svg",
+    "alt": "JavaScript"
+  },
+  {
+    "name": "bootstrap.svg",
+    "alt": "BootStrap"
+  },
+  {
+    "name": "vuetify.svg",
+    "alt": "Vuetify"
+  }
+]

@@ -1,0 +1,32 @@
+---
+interface Props{
+    sizeTitle? : string
+}
+
+const {sizeTitle = '4rem'} = Astro.props
+---
+
+<section class="section-wrap">
+  <div class="section-title">
+    <slot name="section-title" />
+  </div>
+  <slot />
+</section>
+
+<style define:vars={{sizeTitle}}>
+  .section-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(50px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 24px 28px;
+  }
+
+  .section-title{
+    font-size: var(--sizeTitle);
+    display: flex;
+    justify-content: center;
+  }
+</style>

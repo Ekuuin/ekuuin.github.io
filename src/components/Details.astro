@@ -1,0 +1,80 @@
+---
+import Card from "./Card.astro";
+import qualities from "../config/qualities.json";
+import icons from "../config/icons.json";
+---
+
+<div class="details">
+  <div class="frameworks">
+    <Card sizeTitle="2.5rem">
+      <span slot="title">Herramientas</span>
+      <div class="icons-wrap" slot="body">
+        {
+          icons.map((icon) => (
+            <img class="icon" src={icon.name} alt={icon.alt} />
+          ))
+        }
+      </div>
+    </Card>
+    <div class="dot-wrap">
+      <img src="smalldots.svg" class="dots-details" />
+    </div>
+  </div>
+  <div class="qualities">
+    {
+      qualities.map((quality) => (
+        <Card sizeTitle="2rem" sizeBody="1.1rem" icon={quality.icon}>
+          <span slot="title">{quality.title}</span>
+          <span slot="body">{quality.body}</span>
+        </Card>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .details {
+    z-index: 3;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(max(10rem, 100%/2), 1fr));
+    gap: 50px;
+    padding-top: 150px;
+  }
+
+  .frameworks {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    justify-content: space-between;
+  }
+
+  .icons-wrap {
+    width: fit-content;
+    display: flex;
+    gap: 20px;
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .qualities {
+    display: flex;
+    flex-direction: column;
+    padding-top: 180px;
+    display: grid;
+    grid-column: 2;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  .dot-wrap {
+    overflow: hidden;
+  }
+
+  .dots-details {
+    width: 100%;
+  }
+</style>
