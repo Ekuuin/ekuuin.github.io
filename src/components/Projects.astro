@@ -35,10 +35,20 @@ import projects from "../config/projects.json";
   }
 
   .projects-wrap {
-    padding-top: 50px;
+    padding-top: 30px;
     display: grid;
     place-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(max(23rem, 100%/4), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(max(15rem, 100%/4), 1fr));
     gap: 20px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .title{
+      font-size: 2rem;
+      padding-top: 0;
+      padding-left: 0;
+      text-align: center;
+    }
+    
   }
 </style>

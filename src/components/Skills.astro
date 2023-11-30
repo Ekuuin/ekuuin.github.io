@@ -37,12 +37,12 @@ import icons from "../config/icons.json";
     z-index: 3;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(max(10rem, 100%/2), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(max(12rem, 100%/3), 1fr));
     gap: 50px;
     padding-top: 150px;
   }
 
-  .center{
+  .center {
     display: flex;
     justify-content: center;
   }
@@ -52,27 +52,27 @@ import icons from "../config/icons.json";
     justify-content: center;
     flex-direction: column;
     grid-column: 1;
+    gap: 30px;
     justify-content: space-between;
   }
 
   .icons-wrap {
-    width: fit-content;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .icon {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
   }
 
   .qualities {
-    display: flex;
     flex-direction: column;
     padding-top: 180px;
     display: grid;
-    grid-column: 2;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(max(15rem, 100%/3), 1fr));
     gap: 25px;
   }
 
@@ -82,5 +82,38 @@ import icons from "../config/icons.json";
 
   .dots-details {
     width: 100%;
+  }
+
+  @media screen and (max-width: 1400px) {
+    .qualities {
+      padding-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    .qualities {
+      grid-column: 1;
+    }
+
+    .icon{
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+
+  @media screen and (max-width: 500px) {
+    .skills{
+      padding: 0;
+    }
+
+    .icon{
+      width: 50px;
+      height: 50px;
+    }
+
+    .frameworks{
+      flex-direction: column-reverse;
+    }
   }
 </style>

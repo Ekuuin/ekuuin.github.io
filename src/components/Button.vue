@@ -1,10 +1,9 @@
 <template>
-    <v-btn variant="plain" href="#Contact" flat rounded style="border-width: 2px; cursor: pointer; border: 2px solid currentColor;">
-        <span class="btnText">
-            <slot>
+    <v-btn variant="plain" href="#Contact" flat rounded
+        style="border-width: 2px; cursor: pointer; border: 2px solid currentColor;">
+        <slot>
 
-            </slot>
-        </span>
+        </slot>
     </v-btn>
 </template>
 <script setup>
@@ -12,9 +11,5 @@
 
 
 <style>
-.btnText {
-    font-family: 'Open Source Pro', monospace;
-    font-weight: 800;
-    font-size: 1.1rem;
-}
+@media screen {}
 </style>

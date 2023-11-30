@@ -47,4 +47,15 @@ import Card from "./Card.astro";
     flex-direction: column;
     grid-column: 4;
   }
+
+  @media screen and (max-width: 1400px) {
+    .hero-wrapper .hero-right {
+      padding-top: 0;
+      grid-column: 1;
+    }
+
+    .hero-wrapper {
+      gap: 20px;
+    }
+  }
 </style>

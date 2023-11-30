@@ -36,7 +36,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
 <style is:global>
   @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400&family=Hind+Madurai&family=Nunito&family=Source+Code+Pro&display=swap");
 
-  html{
+  html {
     scroll-behavior: smooth;
   }
 
@@ -84,6 +84,15 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
 
   .img-cover {
     width: 100%;
+    max-width: 100%;
     object-fit: cover;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .section-dots {
+      display: none;
+    }
   }
 </style>

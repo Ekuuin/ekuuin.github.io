@@ -14,4 +14,11 @@ const year = new Date().getFullYear();
         font-family: 'Open Source Pro', monospace;
         font-size: 1rem;
     }
+
+    @media screen and (max-width: 500px) {
+        .text-footer{
+            font-size: 0.7rem;
+        }
+        
+    }
 </style>

@@ -6,7 +6,12 @@ interface Props {
   gap?: string;
 }
 
-const { sizeTitle = "4rem", sizeBody = "1.6rem", icon, gap = "15px" } = Astro.props;
+const {
+  sizeTitle = "4rem",
+  sizeBody = "1.6rem",
+  icon,
+  gap = "15px",
+} = Astro.props;
 ---
 
 <div class="card">
@@ -47,7 +52,7 @@ const { sizeTitle = "4rem", sizeBody = "1.6rem", icon, gap = "15px" } = Astro.pr
   .card-body {
     font-size: var(--sizeBody);
     /* font-family: "Hind Madurai", sans-serif; */
-    font-family: 'Open Sokurce Pro', monospace;
+    font-family: "Open Sokurce Pro", monospace;
     /* font-family: 'Nunito', sans-serif; */
     line-height: 1.3em;
   }
@@ -55,5 +60,25 @@ const { sizeTitle = "4rem", sizeBody = "1.6rem", icon, gap = "15px" } = Astro.pr
   .card-icon {
     max-width: 48px;
     max-height: 48px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .card-title {
+      font-size: 3rem;
+    }
+
+    .card-body {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .card-title {
+      font-size: 1.5rem;
+    }
+
+    .card-body {
+      font-size: 1rem;
+    }
   }
 </style>

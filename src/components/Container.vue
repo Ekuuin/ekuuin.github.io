@@ -13,4 +13,10 @@
     z-index: 4;
     position: relative;
 }
+
+@media screen and (max-width: 1400px) {
+    .v-container{
+        padding: 16px !important;
+    }
+}
 </style>
