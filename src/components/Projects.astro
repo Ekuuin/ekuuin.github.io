@@ -3,22 +3,20 @@ import Card from "./Card.astro";
 import projects from "../config/projects.json";
 ---
 
-<section id="Proyectos">
-    <h1 class="title">
-      Proyectos
-    </h1>
-    
-    <div class="projects-wrap">
-      {
-        projects.map((project) => (
-          <Card sizeBody="1.2rem">
-            <a href={project.link} target="_blank" class="link" slot="title"><img class="img-project" src={project.img}/></a>
-            <span slot="body">{project.description}</span>
-          </Card>
-        ))
-      }
-    </div>
-</section>
+<h1 class="title">Proyectos</h1>
+
+<div class="projects-wrap">
+  {
+    projects.map((project) => (
+      <Card sizeBody="1.2rem">
+        <a href={project.link} target="_blank" class="link" slot="title">
+          <img class="img-project" src={project.img} />
+        </a>
+        <span slot="body">{project.description}</span>
+      </Card>
+    ))
+  }
+</div>
 
 <style>
   .title {
@@ -27,19 +25,20 @@ import projects from "../config/projects.json";
     font-size: 4rem;
   }
 
-  .link{
+  .link {
     border-radius: 10px;
   }
 
-  .img-project{
+  .img-project {
     width: 100%;
     border-radius: 10px;
   }
 
-  .projects-wrap{
+  .projects-wrap {
     padding-top: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(max(15rem, 100%/4), 1fr));
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(max(23rem, 100%/4), 1fr));
     gap: 20px;
   }
 </style>

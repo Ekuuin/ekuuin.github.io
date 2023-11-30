@@ -1,0 +1,76 @@
+---
+import Card from "./Card.astro";
+---
+
+<div class="contact-wrap">
+  <div class="center">
+    <h1 class="title">Contacto</h1>
+    <h3 class="subtitle">
+      Si te interesa escribirme, puedes hacerlo <br />a través de mis redes!
+    </h3>
+    <div class="w-100">
+      <Card sizeTitle="2rem" sizeBody="2rem" gap="20px">
+        <div class="link" slot="title">
+          <img class="icon-link" src="linkedin.svg" />
+          <a href="https://www.linkedin.com/in/edwinvalmel/" target="_blank">Edwin Valdés</a>
+        </div>
+        <div class="link" slot="body">
+          <img class="icon-link" src="gmail.svg" />
+          <a href="mailto:edwin.valmel@gmail.com" target="_blank">edwin.valmel@gmail.com</a>
+        </div>
+        <div class="link">
+            <img class="icon-link" src="fb.svg" />
+            <a href="https://www.facebook.com/EdwinValMel/" target="_blank">Edwin Valdés</a>
+          </div>
+      </Card>
+    </div>
+  </div>
+</div>
+
+<style>
+  a {
+    text-decoration: none;
+    font-family: "Open Source Pro", monospace;
+    font-weight: 200;
+  }
+
+  .contact-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  .center {
+    width: fit-content;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .w-100 {
+    width: 100%;
+  }
+
+  .subtitle {
+    font-family: "Open Source Pro", monospace;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 2rem;
+  }
+
+  .icon-link {
+    width: 50px;
+  }
+</style>

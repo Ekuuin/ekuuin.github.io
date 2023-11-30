@@ -3,9 +3,10 @@ interface Props {
   icon?: string;
   sizeTitle?: string;
   sizeBody?: string;
+  gap?: string;
 }
 
-const { sizeTitle = "4rem", sizeBody = "1.6rem", icon } = Astro.props;
+const { sizeTitle = "4rem", sizeBody = "1.6rem", icon, gap = "15px" } = Astro.props;
 ---
 
 <div class="card">
@@ -27,16 +28,15 @@ const { sizeTitle = "4rem", sizeBody = "1.6rem", icon } = Astro.props;
   <slot />
 </div>
 
-<style define:vars={{ sizeTitle, sizeBody }}>
+<style define:vars={{ sizeTitle, sizeBody, gap }}>
   .card {
-    width: fit-content;
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(50px);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 24px 28px;
-    gap: 15px;
+    gap: var(--gap);
   }
 
   .card-title {
@@ -45,7 +45,6 @@ const { sizeTitle = "4rem", sizeBody = "1.6rem", icon } = Astro.props;
   }
 
   .card-body {
-    width: fit-content;
     font-size: var(--sizeBody);
     /* font-family: "Hind Madurai", sans-serif; */
     font-family: 'Open Sokurce Pro', monospace;

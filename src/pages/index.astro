@@ -2,8 +2,9 @@
 import Layout from "../layouts/layout.astro";
 import BackgroundPattern from "../components/BackgroundPattern.astro";
 import Hero from "../components/Hero.astro";
-import Details from "../components/Details.astro";
+import Details from "../components/Skills.astro";
 import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
 import AppBar from "../components/AppBar.vue";
 import Container from "../components/Container.vue";
 ---
@@ -11,14 +12,17 @@ import Container from "../components/Container.vue";
 <Layout title="Ekuuin Dev">
   <BackgroundPattern />
   <AppBar client:only="vue">
-    <Container>
+    <Container id="Home">
       <Hero />
     </Container>
-    <Container>
+    <Container id="Skills">
       <Details />
     </Container>
-    <Container>
+    <Container id="Projects">
       <Projects />
+    </Container>
+    <Container id="Contact">
+      <Contact></Contact>
     </Container>
   </AppBar>
 </Layout>

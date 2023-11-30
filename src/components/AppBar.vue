@@ -1,6 +1,6 @@
 <template>
     <v-app style="background: #0f0617;">
-        <v-app-bar scroll-behavior="elevate" scroll-threshold="20" flat color="#0f0617" height="120" style="position: relative;background: transparent;">
+        <v-app-bar flat color="#0f0617" height="120" style="position:relative; background: transparent;">
             <v-app-bar-title>
                 <div style="padding-left: 30px;">
                     <span class="logoTag">&lt;dev&gt;</span>
@@ -14,10 +14,12 @@
             </Button>
         </v-app-bar>
         <slot></slot>
+        <Footer></Footer>
     </v-app>
 </template>
 <script setup>
 import Button from './Button.vue';
+import Footer from './Footer.vue';
 
 </script>
 
