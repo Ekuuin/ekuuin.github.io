@@ -1,5 +1,5 @@
 <template>
-    <v-btn variant="plain" flat rounded style="border-width: 2px; cursor: pointer; border: 2px solid currentColor;">
+    <v-btn variant="plain" href="#Contact" flat rounded style="border-width: 2px; cursor: pointer; border: 2px solid currentColor;">
         <span class="btnText">
             <slot>
 
