@@ -27,6 +27,7 @@ import vuetifyPlugin from 'vite-plugin-vuetify'
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://ekuuin.github.io',
   integrations: [
     vue({
       appEntrypoint: '/src/_app',
