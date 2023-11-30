@@ -65,6 +65,14 @@ import Footer from './Footer.vue';
     .btn-text{
         display: none;
     }
+
+    .logo{
+        font-size: 1.6rem;
+    }
+
+    .logoTag{
+        font-size: 1.4rem;
+    }
 }
 
 
