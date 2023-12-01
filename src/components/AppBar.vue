@@ -31,13 +31,14 @@ import Footer from './Footer.vue';
 
 .logo {
     font-size: 2rem;
+    font-weight: 700;
     color: white;
 }
 
 .logoTag {
     font-family: 'Open Source Pro', monospace;
     font-size: 1.7rem;
-    font-weight: 300;
+    font-weight: 700;
     color: gray;
     opacity: 0.5;
 }
@@ -71,7 +72,7 @@ import Footer from './Footer.vue';
     }
 
     .logoTag{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 }
 

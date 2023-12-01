@@ -5,7 +5,7 @@ import Card from "./Card.astro";
 <div class="hero-wrapper">
   <div class="hero-left">
     <Card>
-      <h1 slot="title">Bienvenido. <br /> Mi nombre es Edwin.</h1>
+      <h1 class="hero-title" slot="title">Bienvenido. <br /> Mi nombre es Edwin.</h1>
       <h2 slot="body">
         Egresado de la Universidad de Guanajuato DICIS, soy un Ingeniero en Sistemas Computacionales ubicado en Guanajuato, México.
         Actualmente, me desempeño como Desarollador Web Full Stack Jr.
@@ -55,6 +55,12 @@ import Card from "./Card.astro";
 
     .hero-wrapper {
       gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .hero-title{
+      font-size: 2.5rem;
     }
   }
 </style>
