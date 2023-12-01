@@ -4,33 +4,31 @@ import Card from "./Card.astro";
 
 <div class="contact-wrap">
   <img src="smalldots.svg" class="dots" alt="" />
-  <div class="center">
+  <div class="center justify-center">
     <h1 class="title">Contacto</h1>
     <h3 class="subtitle">
       Si te interesa escribirme, puedes hacerlo a través de mis redes!
     </h3>
-    <div class="w-100">
-      <Card sizeTitle="1.5rem" sizeBody="1.5rem" gap="20px">
-        <div class="link" slot="title">
-          <img class="icon-link" src="linkedin.svg" />
-          <a href="https://www.linkedin.com/in/edwinvalmel/" target="_blank"
-            >Edwin Valdés</a
-          >
-        </div>
-        <div class="link" slot="body">
-          <img class="icon-link" src="gmail.svg" />
-          <a href="mailto:edwin.valmel@gmail.com" target="_blank"
-            >edwin.valmel@gmail.com</a
-          >
-        </div>
-        <div class="link">
-          <img class="icon-link" src="fb.svg" />
-          <a href="https://www.facebook.com/EdwinValMel/" target="_blank"
-            >Edwin Valdés</a
-          >
-        </div>
-      </Card>
-    </div>
+    <Card sizeTitle="1.5rem" sizeBody="1.5rem" gap="20px">
+      <div class="link" slot="title">
+        <img class="icon-link" src="linkedin.svg" />
+        <a href="https://www.linkedin.com/in/edwinvalmel/" target="_blank"
+          >Edwin Valdés</a
+        >
+      </div>
+      <div class="link" slot="body">
+        <img class="icon-link" src="gmail.svg" />
+        <a href="mailto:edwin.valmel@gmail.com" target="_blank"
+          >edwin.valmel@gmail.com</a
+        >
+      </div>
+      <div class="link">
+        <img class="icon-link" src="fb.svg" />
+        <a href="https://www.facebook.com/EdwinValMel/" target="_blank"
+          >Edwin Valdés</a
+        >
+      </div>
+    </Card>
   </div>
   <img src="smalldots.svg" class="dots" alt="" />
 </div>
@@ -43,8 +41,9 @@ import Card from "./Card.astro";
   }
 
   .contact-wrap {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(max(15rem, 100%/4), 1fr));
+    overflow: hidden;
   }
 
   .center {
@@ -55,8 +54,13 @@ import Card from "./Card.astro";
     flex-direction: column;
   }
 
+  .justify-center {
+    justify-self: center;
+  }
+
   .title {
     font-size: 4rem;
+    font-weight: bold;
   }
 
   .subtitle {
@@ -72,6 +76,7 @@ import Card from "./Card.astro";
     justify-content: center;
     gap: 10px;
     font-size: 1.5rem;
+    flex-wrap: wrap;
   }
 
   .icon-link {
@@ -80,33 +85,42 @@ import Card from "./Card.astro";
 
   .dots {
     transform: rotate(90deg);
-    width: fit-content;
-    max-width: 25rem;
+    max-width: 100%;
   }
 
   @media screen and (max-width: 1600px) {
     .dots {
       display: none;
     }
+
+    .contact-wrap{
+      grid-template-columns: 1fr;
+    }
   }
 
-  @media screen and (max-width: 1100px){
-    .title{
+  @media screen and (max-width: 1100px) {
+    .title {
       font-size: 3rem;
     }
 
-    .subtitle, .link{
+    .subtitle,
+    .link {
       font-size: 1.2rem;
     }
   }
 
-  @media screen and (max-width: 800px){
-    .title{
+  @media screen and (max-width: 800px) {
+    .title {
       font-size: 2rem;
     }
 
-    .subtitle, .link{
+    .subtitle,
+    .link {
       font-size: 1.2rem;
+    }
+
+    .link{
+      flex-direction: column;
     }
   }
 </style>
