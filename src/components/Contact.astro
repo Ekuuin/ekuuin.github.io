@@ -59,10 +59,6 @@ import Card from "./Card.astro";
     font-size: 4rem;
   }
 
-  .w-100 {
-    width: 100%;
-  }
-
   .subtitle {
     font-family: "Open Source Pro", monospace;
     text-align: center;
@@ -94,13 +90,23 @@ import Card from "./Card.astro";
     }
   }
 
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 1100px){
+    .title{
+      font-size: 3rem;
+    }
+
+    .subtitle, .link{
+      font-size: 1.2rem;
+    }
+  }
+
+  @media screen and (max-width: 800px){
     .title{
       font-size: 2rem;
     }
 
     .subtitle, .link{
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
 </style>

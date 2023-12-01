@@ -18,7 +18,7 @@ const {
   {
     icon ? (
       <div class="card-icon">
-        <img src={icon} loading="lazy" slot="icon" />
+        <img src={icon} class="icon" loading="lazy"/>
       </div>
     ) : (
       false
@@ -57,18 +57,28 @@ const {
     line-height: 1.3em;
   }
 
-  .card-icon {
+  .icon {
     max-width: 48px;
     max-height: 48px;
   }
 
   @media screen and (max-width: 1100px) {
     .card-title {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
 
     .card-body {
       font-size: 1.3rem;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .card-title {
+      font-size: 2rem;
+    }
+
+    .card-body {
+      font-size: 1.1rem;
     }
   }
 

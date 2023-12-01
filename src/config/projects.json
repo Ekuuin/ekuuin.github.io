@@ -1,27 +1,22 @@
 [
   {
-    "img": "proyecto.webp",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, nisiaut. Quidem molestiae amet repudiandae. Doloremque eligendi in et vero.",
-    "link": "https://github.com/Ekuuin/ekuuinLanding"
+    "img": "restaurante.webp",
+    "description": "Herramientas: VueJS + Vuetify + Express + MySQL. Aplicación web de un punto de venta para restaurante, donde se almacena información como clientes, meseros, órdenes, productos, etc. Además, proporciona total del día, por fecha, por mesero y otras funciones.",
+    "link": "https://github.com/Ekuuin/restaurante_vuejs"
+  },
+  {
+    "img": "soc.webp",
+    "description": "Herramientas: PHP + Bootstrap + MVC + MySQL. Aplicación web creada para el proceso de compra-venta de materiales. Permite el registro de usuarios y proveedores, almacena sus documentos y admite la descarga de los mismos, genera archivos PDF y Excel para dar seguimiento a las órdenes.",
+    "link": "https://github.com/Ekuuin/Sistema_de_Compras"
+  },
+  {
+    "img": "aluval.webp",
+    "description": "Herramientas: Python + VueJS + Vuetify + MySQL. Aplicación web diseñada para realizar cotizaciones de instalaciones de vidrio y aluminio. Almacena los costos de cada tipo de perfil y vidrio. Proporciona un documento PDF con la cotización y guarda el proyecto para futuras consultas.",
+    "link": "https://github.com/Ekuuin/Aluval"
   },
   {
     "img": "proyecto.webp",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, nisiaut. Quidem molestiae amet repudiandae. Doloremque eligendi in et vero.",
-    "link": "https://github.com/Ekuuin/ekuuinLanding"
-  },
-  {
-    "img": "proyecto.webp",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, nisiaut. Quidem molestiae amet repudiandae. Doloremque eligendi in et vero.",
-    "link": "https://github.com/Ekuuin/ekuuinLanding"
-  },
-  {
-    "img": "proyecto.webp",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, nisiaut. Quidem molestiae amet repudiandae. Doloremque eligendi in et vero.",
-    "link": "https://github.com/Ekuuin/ekuuinLanding"
-  },
-  {
-    "img": "proyecto.webp",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, nisiaut. Quidem molestiae amet repudiandae. Doloremque eligendi in et vero.",
+    "description": "Herramientas: Astro + VueJS + Vuetify. Página web estática creada como portafolio de desarrollador.",
     "link": "https://github.com/Ekuuin/ekuuinLanding"
   }
 ]
