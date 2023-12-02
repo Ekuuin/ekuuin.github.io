@@ -4,6 +4,7 @@ interface Props {
   sizeTitle?: string;
   sizeBody?: string;
   gap?: string;
+  hover?: boolean
 }
 
 const {
@@ -11,10 +12,11 @@ const {
   sizeBody = "1.6rem",
   icon,
   gap = "15px",
+  hover = false
 } = Astro.props;
 ---
 
-<div class="card reveal">
+<div class:list={['card', 'reveal', { expand : hover}]}>
   {
     icon ? (
       <div class="card-icon">
@@ -32,25 +34,6 @@ const {
   </div>
   <slot />
 </div>
-
-<script defer>
-  function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      }
-    }
-  }
-
-  window.addEventListener("scroll", reveal);
-  reveal();
-</script>
 
 <style define:vars={{ sizeTitle, sizeBody, gap }}>
   .card {
@@ -85,12 +68,17 @@ const {
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: 2s all ease;
+    transition: 1s all ease;
   }
 
   .reveal.active {
     transform: translateY(0);
     opacity: 1;
+  }
+
+  .expand:hover{
+    transform: translate3d(0,-1px,0) scale(1.03);
+    transition: 0.5s all ease;
   }
 
   @media screen and (max-width: 1100px) {

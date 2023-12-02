@@ -8,7 +8,7 @@ import projects from "../config/projects.json";
 <div class="projects-wrap">
   {
     projects.map((project) => (
-      <Card sizeBody="1.2rem">
+      <Card sizeBody="1.2rem" hover={true}>
         <a href={project.link} target="_blank" class="link" slot="title">
           <img class="img-project" src={project.img} />
         </a>
