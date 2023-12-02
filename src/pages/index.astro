@@ -11,7 +11,7 @@ import Container from "../components/Container.vue";
 
 <Layout title="Ekuuin Dev">
   <BackgroundPattern />
-  <AppBar client:only="vue">
+  <AppBar>
     <Container id="Home">
       <Hero />
     </Container>
@@ -22,7 +22,7 @@ import Container from "../components/Container.vue";
       <Projects />
     </Container>
     <Container id="Contact">
-      <Contact></Contact>
+      <Contact />
     </Container>
   </AppBar>
 </Layout>

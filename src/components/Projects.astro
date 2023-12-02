@@ -3,7 +3,7 @@ import Card from "./Card.astro";
 import projects from "../config/projects.json";
 ---
 
-<h1 class="title">Proyectos</h1>
+<h1 id="title-projects" class="title"></h1>
 
 <div class="projects-wrap">
   {
@@ -17,6 +17,15 @@ import projects from "../config/projects.json";
     ))
   }
 </div>
+
+<script>
+  import TypeIt from "typeit/src/TypeIt";
+
+  new TypeIt("#title-projects", {
+    lifeLike: true,
+    waitUntilVisible: true,
+  }).type("Proyectos").go();
+</script>
 
 <style>
   .title {
@@ -44,22 +53,20 @@ import projects from "../config/projects.json";
   }
 
   @media screen and (max-width: 1100px) {
-    .title{
+    .title {
       font-size: 3.5rem;
       padding-top: 0;
       padding-left: 0;
       text-align: center;
     }
-    
   }
 
   @media screen and (max-width: 800px) {
-    .title{
+    .title {
       font-size: 2.5rem;
       padding-top: 0;
       padding-left: 0;
       text-align: center;
     }
-    
   }
 </style>

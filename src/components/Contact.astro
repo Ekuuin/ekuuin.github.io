@@ -5,7 +5,7 @@ import Card from "./Card.astro";
 <div class="contact-wrap">
   <img src="smalldots.svg" class="dots" alt="" />
   <div class="center justify-center">
-    <h1 class="title">Contacto</h1>
+    <h1 id="title" class="title"></h1>
     <h3 class="subtitle">
       Si te interesa escribirme, puedes hacerlo a través de mis redes!
     </h3>
@@ -32,6 +32,17 @@ import Card from "./Card.astro";
   </div>
   <img src="smalldots.svg" class="dots" alt="" />
 </div>
+
+<script>
+  import TypeIt from "typeit/src/TypeIt";
+
+  new TypeIt("#title", {
+    lifeLike: true,
+    waitUntilVisible: true,
+  })
+    .type("Contacto")
+    .go();
+</script>
 
 <style>
   a {
@@ -93,7 +104,7 @@ import Card from "./Card.astro";
       display: none;
     }
 
-    .contact-wrap{
+    .contact-wrap {
       grid-template-columns: 1fr;
     }
   }
@@ -119,7 +130,7 @@ import Card from "./Card.astro";
       font-size: 1.2rem;
     }
 
-    .link{
+    .link {
       flex-direction: column;
     }
   }
