@@ -14,11 +14,11 @@ const {
 } = Astro.props;
 ---
 
-<div class="card">
+<div class="card reveal">
   {
     icon ? (
       <div class="card-icon">
-        <img src={icon} class="icon" loading="lazy"/>
+        <img src={icon} class="icon" loading="lazy" />
       </div>
     ) : (
       false
@@ -32,6 +32,25 @@ const {
   </div>
   <slot />
 </div>
+
+<script defer>
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", reveal);
+  reveal();
+</script>
 
 <style define:vars={{ sizeTitle, sizeBody, gap }}>
   .card {
@@ -60,6 +79,18 @@ const {
   .icon {
     max-width: 48px;
     max-height: 48px;
+  }
+
+  .reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+
+  .reveal.active {
+    transform: translateY(0);
+    opacity: 1;
   }
 
   @media screen and (max-width: 1100px) {
