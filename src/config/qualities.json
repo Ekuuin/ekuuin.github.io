@@ -2,21 +2,25 @@
   {
     "icon": "icon1.svg",
     "title": "Flexibilidad",
-    "body": "Implica ser receptivo a nuevas ideas, cambios en el entorno y diferentes circunstancias, sin perder la orientación o la eficacia."
+    "body": "Implica ser receptivo a nuevas ideas, cambios en el entorno y diferentes circunstancias, sin perder la orientación o la eficacia.",
+    "alt": "Icono infinito"
   },
   {
     "icon": "confirm.svg",
     "title": "Asertividad y Calidad",
-    "body": "Expresarse de manera clara y directa para avanzar y crear un producto o servicio de calidad que proporcione valor real al cliente y cumplir o superar sus expectativas"
+    "body": "Expresarse de manera clara y directa para avanzar y crear un producto o servicio de calidad que proporcione valor real al cliente y cumplir o superar sus expectativas",
+    "alt": "Icono confirmado"
   },
   {
     "icon": "team.svg",
     "title": "Comunicación y Colaboración",
-    "body": "Va más allá de simplemente trabajar en un equipo, abarcando la disposición para compartir ideas, esfuerzos y responsabilidades."
+    "body": "Va más allá de simplemente trabajar en un equipo, abarcando la disposición para compartir ideas, esfuerzos y responsabilidades.",
+    "alt": "Icono equipo"
   },
   {
     "icon": "proactive.svg",
     "title": "Proactividad e Iniciativa",
-    "body": "Anticiparse a posibles desafíos y planificar medidas preventivas. Tomar decisiones y ejecutar acciones que contribuyan a los resultados."
+    "body": "Anticiparse a posibles desafíos y planificar medidas preventivas. Tomar decisiones y ejecutar acciones que contribuyan a los resultados.",
+    "alt": "Icono flechas"
   }
 ]

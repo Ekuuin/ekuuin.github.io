@@ -12,7 +12,7 @@ import icons from "../config/icons.json";
         {
           icons.map((icon) => (
             <div class="tooltip">
-              <img class="icon" src={icon.name} alt={icon.alt} />
+              <img class="icon" src={icon.name} alt={icon.alt} loading="lazy" />
               <span class="tooltip-text">{icon.alt}</span>
             </div>
           ))
@@ -20,13 +20,13 @@ import icons from "../config/icons.json";
       </div>
     </Card>
     <div class="dot-wrap">
-      <img src="smalldots.svg" class="dots-details" />
+      <img src="smalldots.svg" class="dots-details" alt="Patrón de puntos" />
     </div>
   </div>
   <div class="qualities">
     {
       qualities.map((quality) => (
-        <Card sizeTitle="2rem" sizeBody="1.1rem" icon={quality.icon}>
+        <Card sizeTitle="2rem" sizeBody="1.1rem" icon={quality.icon} altIcon={quality.alt}>
           <h3 slot="title">{quality.title}</h3>
           <span slot="body">{quality.body}</span>
         </Card>

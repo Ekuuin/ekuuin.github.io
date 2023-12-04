@@ -4,23 +4,25 @@ interface Props {
   sizeTitle?: string;
   sizeBody?: string;
   gap?: string;
-  hover?: boolean
+  altIcon?: string;
+  hover?: boolean;
 }
 
 const {
   sizeTitle = "4rem",
   sizeBody = "1.6rem",
   icon,
+  altIcon = "Icono",
   gap = "15px",
-  hover = false
+  hover = false,
 } = Astro.props;
 ---
 
-<div class:list={['card', 'reveal', { expand : hover}]}>
+<div class:list={["card", "reveal", { expand: hover }]}>
   {
     icon ? (
       <div class="card-icon">
-        <img src={icon} class="icon" loading="lazy" />
+        <img src={icon} class="icon" loading="lazy" alt={altIcon} />
       </div>
     ) : (
       false
@@ -76,8 +78,8 @@ const {
     opacity: 1;
   }
 
-  .expand:hover{
-    transform: translate3d(0,-1px,0) scale(1.03);
+  .expand:hover {
+    transform: translate3d(0, -1px, 0) scale(1.03);
     transition: 0.5s all ease;
   }
 

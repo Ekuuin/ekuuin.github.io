@@ -10,7 +10,7 @@ import projects from "../config/projects.json";
     projects.map((project) => (
       <Card sizeBody="1.2rem" hover={true}>
         <a href={project.link} target="_blank" class="link" slot="title">
-          <img class="img-project" src={project.img} />
+          <img class="img-project" src={project.img} loading="lazy" alt="Project screenshot"/>
         </a>
         <span slot="body">{project.description}</span>
       </Card>
