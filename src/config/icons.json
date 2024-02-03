@@ -30,5 +30,25 @@
   {
     "name": "vuetify.svg",
     "alt": "Vuetify"
+  },
+  {
+    "name": "svelte.svg",
+    "alt": "Svelte"
+  },
+  {
+    "name": "react.svg",
+    "alt": "React"
+  },
+  {
+    "name": "nodejs.svg",
+    "alt": "NodeJS"
+  },
+  {
+    "name": "git.svg",
+    "alt": "Git"
+  },
+  {
+    "name": "typescript.svg",
+    "alt": "TypeScript"
   }
 ]
