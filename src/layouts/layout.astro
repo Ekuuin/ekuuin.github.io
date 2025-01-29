@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import dotsPattern from '../../public/dotspattern.svg';
+
 interface Props {
   title?: string;
 }
@@ -22,8 +25,8 @@ const { title } = Astro.props;
     <div class="page-wrapper">
       <section class="section-dots">
         <div class="dots-pattern">
-          <img
-            src="dotspattern.svg"
+          <Image
+            src={dotsPattern}
             class="img-cover"
             alt="Patrón de puntos, hero background"
           />
